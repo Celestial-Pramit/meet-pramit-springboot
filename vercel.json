@@ -1,6 +1,7 @@
 {
   "buildCommand": "./mvnw clean package -DskipTests",
   "outputDirectory": "target",
+  "framework": "spring-boot",
   "env": {
     "NIXPACKS_JDK_VERSION": "17"
   }

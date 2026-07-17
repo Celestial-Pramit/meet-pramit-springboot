@@ -139,7 +139,7 @@ Vercel **auto-deploys** on every push. No manual action needed.
 ## Troubleshooting
 
 ### Build fails on Vercel
-- Check if Java 21 is available (Vercel supports it)
+- Check if Java 17 is available (configured in nixpacks.toml)
 - Check build logs for errors
 - Make sure `vercel.json` is in the project root
 

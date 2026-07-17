@@ -2,4 +2,7 @@
 nixPkgs = ["jdk17"]
 
 [phases.build]
-cmd = "./mvnw clean package -DskipTests"
+cmd = "./mvnw clean package -DskipTests -Dmaven.test.skip=true"
+
+[start]
+cmd = "java -jar target/*.jar"
