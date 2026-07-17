@@ -1,2 +1,5 @@
-[phases.setup]
+[phases.install]
 nixPkgs = ["jdk17"]
+
+[phases.build]
+cmd = "./mvnw clean package -DskipTests"

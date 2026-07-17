@@ -1,4 +1,7 @@
 {
   "buildCommand": "./mvnw clean package -DskipTests",
-  "outputDirectory": "target"
+  "outputDirectory": "target",
+  "env": {
+    "NIXPACKS_JDK_VERSION": "17"
+  }
 }
