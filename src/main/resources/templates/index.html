@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pramit Datta - Backend Developer | Java Developer | Portfolio" />
+  <title>Pramit Datta | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" th:href="@{/css/style.css}" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+
+
+  <section id="home" class="hero">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-image-wrapper">
+        <div class="hero-image-stack">
+          <div class="stack-card"></div>
+          <div class="stack-card"></div>
+          <div class="stack-card"></div>
+          <div class="hero-image-frame">
+            <img th:src="@{/images/pramit.png}" alt="Pramit Datta" class="hero-image" />
+          </div>
+        </div>
+      </div>
+      <h1 class="hero-title">Hey there, I'm <span class="gradient-text">Pramit Datta</span></h1>
+      <p class="hero-subtitle"><span class="text-accent">Backend Developer</span> | Java Developer | Aspiring<br/>Machine Learning Engineer</p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="mouse-scroll">
+        <div class="mouse-scroll-wheel"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section about">
+    <div class="container">
+      <div class="section-header">
+        <h2><span class="gradient-text section-heading-anim" data-bn="আমার সম্পর্কে">About Me</span></h2>
+        <p class="section-subtitle" data-bn="ব্যাকএন্ড ডেভেলপার • জাভা ডেভেলপার • উচ্চাকাঙ্ক্ষী এমএল ইঞ্জিনিয়ার">Backend Developer &bull; Java Developer &bull; Aspiring ML Engineer</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-image-col">
+          <div class="about-image-frame">
+            <img th:src="@{/images/pramit-2.jpg}" alt="Pramit Datta" />
+          </div>
+        </div>
+        <div class="about-text-col">
+          <div class="about-card-grid">
+            <div class="about-mini-card">
+              <div class="card-icon"><i data-lucide="user"></i></div>
+              <h4 data-bn="আমি কে">Who I Am</h4>
+              <p data-bn="আমি একজন কম্পিউটার সায়েন্স ও ইঞ্জিনিয়ারিং আন্ডারগ্রাজুয়েট। স্কেলেবল ব্যাকএন্ড সিস্টেম নির্মাণ এবং কৃত্রিম বুদ্ধিমত্তা ও মেশিন লার্নিং অন্বেষণ করাই আমার প্রধান আগ্রহ। আমার মূল ফোকাস জাভা ও স্প্রিং বুট ডেভেলপমেন্ট, পাশাপাশি সি++, পাইথন এবং আধুনিক সফটওয়্যার ইঞ্জিনিয়ারিং অনুশীলনে দক্ষতা অর্জন করছি।">I'm a Computer Science & Engineering undergraduate passionate about building scalable backend systems and exploring Artificial Intelligence and Machine Learning. My primary focus is Java and Spring Boot development, while continuously expanding my expertise in C++, Python, and modern software engineering practices.</p>
+            </div>
+            <div class="about-mini-card">
+              <div class="card-icon"><i data-lucide="zap"></i></div>
+              <h4 data-bn="আমি কী করি">What I Do</h4>
+              <p data-bn="আমি অ্যালগরিদমিক সমস্যা সমাধান, বাস্তব-জীবনের অ্যাপ্লিকেশন তৈরি এবং এআই, স্পিচ ইমোশন রিকগনিশন, টিনিএমএল ও ডিপ লার্নিং নিয়ে গবেষণা করতে পছন্দ করি। আমার দীর্ঘমেয়াদী লক্ষ্য হলো ব্যাকএন্ড সিস্টেমে বিশেষায়িত সফটওয়্যার ইঞ্জিনিয়ার হওয়ার পাশাপাশি প্রভাবশালী এআই গবেষণায় অবদান রাখা।">I enjoy solving algorithmic problems, developing real-world applications, and conducting research in AI, Speech Emotion Recognition, TinyML, and Deep Learning. My long-term goal is to become a software engineer specializing in backend systems while contributing to impactful AI research.</p>
+            </div>
+            <div class="about-mini-card">
+              <div class="card-icon"><i data-lucide="map-pin"></i></div>
+              <h4 data-bn="অবস্থান">Location</h4>
+              <p data-bn="বাংলাদেশ">Bangladesh</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon"><i data-lucide="code-2"></i></div>
+          <span class="stat-number">5+</span>
+          <span class="stat-label" data-bn="প্রকল্প নির্মিত">Projects Built</span>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i data-lucide="book-open"></i></div>
+          <span class="stat-number">2027</span>
+          <span class="stat-label" data-bn="প্রত্যাশিত স্নাতক">Expected Graduation</span>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i data-lucide="terminal"></i></div>
+          <span class="stat-number">6</span>
+          <span class="stat-label" data-bn="ভাষা">Languages</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section skills">
+    <div class="container">
+      <div class="section-header">
+        <h2><span class="gradient-text section-heading-anim">Technical Skills</span></h2>
+        <p class="section-subtitle">Technologies I work with</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <div class="skill-card-icon"><i class="devicon-java-plain colored"></i></div>
+            <h3>Languages</h3>
+          </div>
+          <div class="skill-tags">
+            <span><i class="devicon-java-plain colored"></i> Java</span>
+            <span><i class="devicon-cplusplus-plain colored"></i> C++</span>
+            <span><i class="devicon-python-plain colored"></i> Python</span>
+            <span><i class="devicon-c-plain colored"></i> C</span>
+            <span><i class="devicon-mysql-plain colored"></i> SQL</span>
+            <span><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <div class="skill-card-icon"><i class="devicon-spring-plain colored"></i></div>
+            <h3>Backend</h3>
+          </div>
+          <div class="skill-tags">
+            <span><i class="devicon-spring-plain colored"></i> Spring Boot</span>
+            <span>REST APIs</span>
+            <span>OOP</span>
+            <span>JDBC</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <div class="skill-card-icon"><i class="devicon-html5-plain colored"></i></div>
+            <h3>Frontend</h3>
+          </div>
+          <div class="skill-tags">
+            <span><i class="devicon-java-plain colored"></i> JavaFX</span>
+            <span><i class="devicon-html5-plain colored"></i> HTML</span>
+            <span><i class="devicon-css3-plain colored"></i> CSS</span>
+            <span><i class="devicon-tailwindcss-plain colored"></i> Tailwind CSS</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <div class="skill-card-icon"><i class="devicon-mysql-plain colored"></i></div>
+            <h3>Database</h3>
+          </div>
+          <div class="skill-tags">
+            <span><i class="devicon-mysql-plain colored"></i> MySQL</span>
+            <span>Singleton DB Design</span>
+            <span>SQL Optimization</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <div class="skill-card-icon"><i class="devicon-python-plain colored"></i></div>
+            <h3>AI & ML</h3>
+          </div>
+          <div class="skill-tags">
+            <span><i class="devicon-numpy-plain colored"></i> NumPy</span>
+            <span><i class="devicon-pandas-plain colored"></i> Pandas</span>
+            <span><i class="devicon-scikitlearn-plain colored"></i> Scikit-learn</span>
+            <span><i class="devicon-tensorflow-plain colored"></i> TensorFlow</span>
+            <span><i class="devicon-pytorch-plain colored"></i> PyTorch</span>
+            <span>SER</span>
+            <span>TinyML</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <div class="skill-card-icon"><i class="devicon-git-plain colored"></i></div>
+            <h3>Tools</h3>
+          </div>
+          <div class="skill-tags">
+            <span><i class="devicon-git-plain colored"></i> Git</span>
+            <span><i class="devicon-github-plain colored"></i> GitHub</span>
+            <span><i class="devicon-intellij-plain colored"></i> IntelliJ IDEA</span>
+            <span><i class="devicon-vscode-plain colored"></i> VS Code</span>
+            <span><i class="devicon-linux-plain colored"></i> Linux</span>
+            <span><i class="devicon-latex-plain colored"></i> LaTeX</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="section experience">
+    <div class="container">
+      <div class="section-header">
+        <h2><span class="gradient-text section-heading-anim">Education</span></h2>
+        <p class="section-subtitle">My academic journey</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <div class="timeline-icon"><i data-lucide="graduation-cap"></i></div>
+              <span class="timeline-badge">B.Sc.</span>
+            </div>
+            <h3 class="timeline-role">Computer Science & Engineering</h3>
+            <p class="timeline-company">Southeast University</p>
+            <p class="timeline-info">Bangladesh &middot; Expected 2027</p>
+            <p class="timeline-desc">Pursuing a Bachelor's degree with a focus on software engineering, algorithms, and artificial intelligence.</p>
+            <ul class="timeline-achievements">
+              <li>Data Structures & Algorithms</li>
+              <li>Database Management Systems</li>
+              <li>Operating Systems & Computer Networks</li>
+              <li>Software Engineering</li>
+              <li>Artificial Intelligence & Machine Learning</li>
+            </ul>
+            <div class="timeline-tags">
+              <span><i class="devicon-java-plain colored"></i> Java</span>
+              <span><i class="devicon-cplusplus-plain colored"></i> C++</span>
+              <span><i class="devicon-python-plain colored"></i> Python</span>
+              <span><i class="devicon-mysql-plain colored"></i> MySQL</span>
+              <span>DSA</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <div class="timeline-icon"><i data-lucide="graduation-cap"></i></div>
+              <span class="timeline-badge">HSC</span>
+            </div>
+            <h3 class="timeline-role">Higher Secondary Certificate</h3>
+            <p class="timeline-company">Chattogram Government Model School and College</p>
+            <p class="timeline-info">Bangladesh &middot; 2020 &ndash; 2022</p>
+            <p class="timeline-desc">Completed Higher Secondary education with a focus on Science, building a strong foundation in analytical thinking and problem-solving.</p>
+            <div class="timeline-tags">
+              <span>Science</span>
+              <span>Mathematics</span>
+              <span>Physics</span>
+              <span>Chemistry</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:48px;">
+        <div class="section-header">
+          <h3 style="font-size:1.5rem;"><span class="gradient-text section-heading-anim">Research Interests</span></h3>
+        </div>
+        <div class="stats-grid research-grid">
+          <div class="stat-card">
+            <div class="stat-icon"><i data-lucide="cpu"></i></div>
+            <span class="stat-label">Machine Learning &amp; Deep Learning</span>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"><i data-lucide="mic"></i></div>
+            <span class="stat-label">Speech Emotion Recognition</span>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"><i data-lucide="microchip"></i></div>
+            <span class="stat-label">TinyML &amp; NLP</span>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"><i data-lucide="eye"></i></div>
+            <span class="stat-label">Computer Vision</span>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"><i data-lucide="layers"></i></div>
+            <span class="stat-label">Backend System Design</span>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"><i data-lucide="share-2"></i></div>
+            <span class="stat-label">Distributed Systems</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section projects">
+    <div class="container">
+      <div class="section-header">
+        <h2><span class="gradient-text section-heading-anim">Featured Projects</span></h2>
+        <p class="section-subtitle">Things I've built</p>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-image">
+            <img th:src="@{/images/project-research.jpg}" alt="Research Paper Management System" />
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Research Paper Management System</h3>
+              <p class="project-desc">A desktop application that helps students organize research papers, manage metadata, categorize publications, and search documents efficiently.</p>
+            <div class="project-tags">
+              <span><i class="devicon-java-plain colored"></i> Java</span>
+              <span><i class="devicon-java-plain colored"></i> JavaFX</span>
+              <span><i class="devicon-mysql-plain colored"></i> MySQL</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link"><i data-lucide="external-link"></i> Coming Soon</a>
+              <a href="#" class="project-link"><i data-lucide="github"></i> Source</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <img th:src="@{/images/project-audio.jpg}" alt="VoiceEdge-B SER" />
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">VoiceEdge-B: Cross-Lingual SER</h3>
+            <p class="project-desc">A research-oriented deep learning project on speech emotion recognition using acoustic-prosodic knowledge distillation and speaker normalization for multilingual datasets.</p>
+            <div class="project-tags">
+              <span><i class="devicon-python-plain colored"></i> Python</span>
+              <span><i class="devicon-tensorflow-plain colored"></i> TensorFlow</span>
+              <span><i class="devicon-pytorch-plain colored"></i> PyTorch</span>
+              <span><i class="devicon-python-plain colored"></i> Librosa</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link"><i data-lucide="file-text"></i> Paper</a>
+              <a href="#" class="project-link"><i data-lucide="github"></i> Private</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <img th:src="@{/images/project-cinema.jpg}" alt="Movie Review System" />
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Movie Review System</h3>
+            <p class="project-desc">A desktop app for browsing movies, submitting ratings and reviews, and discovering popular films. Features user authentication, movie management, and MySQL integration.</p>
+            <div class="project-tags">
+              <span><i class="devicon-java-plain colored"></i> Java</span>
+              <span><i class="devicon-java-plain colored"></i> JavaFX</span>
+              <span><i class="devicon-mysql-plain colored"></i> MySQL</span>
+              <span><i class="devicon-mysql-plain colored"></i> JDBC</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link"><i data-lucide="external-link"></i> Live Demo</a>
+              <a href="#" class="project-link"><i data-lucide="github"></i> Source</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <img th:src="@{/images/project-library.jpg}" alt="Library Management System" />
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Library Management System</h3>
+              <p class="project-desc">A complete library management application supporting book inventory, issue/return operations, user management, and search functionality.</p>
+            <div class="project-tags">
+              <span><i class="devicon-java-plain colored"></i> Java</span>
+              <span><i class="devicon-java-plain colored"></i> JavaFX</span>
+              <span><i class="devicon-mysql-plain colored"></i> MySQL</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link"><i data-lucide="github"></i> Source</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <img th:src="@{/images/project-portfolio.jpg}" alt="Portfolio Website" />
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Personal Portfolio Website</h3>
+            <p class="project-desc">A responsive portfolio website showcasing projects, skills, achievements, and research interests with a modern dark-themed user interface.</p>
+            <div class="project-tags">
+            <span><i class="devicon-html5-plain colored"></i> HTML</span>
+            <span><i class="devicon-css3-plain colored"></i> CSS</span>
+            <span><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link"><i data-lucide="external-link"></i> Live</a>
+              <a href="#" class="project-link"><i data-lucide="github"></i> Source</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume" class="section resume">
+    <div class="container">
+      <div class="section-header">
+        <h2><span class="gradient-text section-heading-anim">Resume</span></h2>
+        <p class="section-subtitle">My professional profile</p>
+      </div>
+      <div class="resume-card">
+        <div class="resume-card-left">
+          <div class="resume-icon"><i data-lucide="file-text"></i></div>
+          <div>
+            <h3 class="resume-name">Pramit Datta &mdash; Resume</h3>
+            <p class="resume-sub">Backend Developer &bull; Java &bull; CSE Undergraduate</p>
+          </div>
+        </div>
+        <div class="resume-card-actions">
+          <button class="btn-resume btn-resume-primary" id="toggleResume">Hide Resume</button>
+          <a th:href="@{/resume.pdf}" class="btn-resume btn-resume-outline" download>Download PDF</a>
+          <a th:href="@{/resume.pdf}" class="btn-resume btn-resume-ghost" target="_blank">Open in New Tab</a>
+        </div>
+      </div>
+      <div class="resume-preview" id="resumePreview">
+        <div class="pdf-js-container">
+          <canvas id="pdfCanvas"></canvas>
+          <div class="pdf-controls">
+            <button id="pdfPrev" class="pdf-btn" disabled><i data-lucide="chevron-left"></i></button>
+            <span id="pdfPageInfo">Page <span id="pdfCurrent">1</span> of <span id="pdfTotal">1</span></span>
+            <button id="pdfNext" class="pdf-btn" disabled><i data-lucide="chevron-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact">
+    <div class="container">
+      <div class="section-header">
+        <h2><span class="gradient-text section-heading-anim">Get In Touch</span></h2>
+        <p class="section-subtitle">Have a project in mind? Let's talk</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3 class="contact-heading">Let's Connect</h3>
+          <p class="contact-desc">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out through any of the channels below.</p>
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-item-icon"><i data-lucide="mail"></i></div>
+              <div>
+                <span class="contact-item-label">Email</span>
+                <span class="contact-item-value">pramitdutta04@gmail.com</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon"><i data-lucide="phone"></i></div>
+              <div>
+                <span class="contact-item-label">GitHub</span>
+                <span class="contact-item-value"><a href="https://github.com/Celestial-Pramit" target="_blank" style="color:inherit;">github.com/Celestial-Pramit</a></span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon"><i data-lucide="map-pin"></i></div>
+              <div>
+                <span class="contact-item-label">Location</span>
+                <span class="contact-item-value">Bangladesh</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm" action="/contact-submit" method="post">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-submit" id="sendBtn">
+            <i data-lucide="send"></i> <span>Send Message</span>
+          </button>
+          <p class="form-status" id="formStatus"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Pramit Datta</h3>
+          <p>Backend developer &amp; Java enthusiast building scalable systems.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home"><i data-lucide="home"></i> Home</a></li>
+            <li><a href="#about"><i data-lucide="user"></i> About</a></li>
+        <li><a href="#experience"><i data-lucide="graduation-cap"></i> Education</a></li>
+            <li><a href="#skills"><i data-lucide="code-2"></i> Skills</a></li>
+            <li><a href="#projects"><i data-lucide="folder"></i> Projects</a></li>
+            <li><a href="#contact"><i data-lucide="mail"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Social</h4>
+          <div class="footer-social-icons">
+            <a href="https://github.com/Celestial-Pramit" target="_blank" aria-label="GitHub"><i class="devicon-github-plain"></i></a>
+            <a href="https://www.linkedin.com/in/pramit-datta" target="_blank" aria-label="LinkedIn"><i class="devicon-linkedin-plain colored"></i></a>
+            <a href="mailto:pramitdutta04@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Pramit Datta. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="#home" class="nav-logo">Pramit Datta</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+            <li><a href="#experience">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="pikachu" id="pikachu">
+    <div class="pikachu-ear-l"></div>
+    <div class="pikachu-ear-r"></div>
+    <div class="pikachu-body">
+      <div class="pikachu-eye-l"></div>
+      <div class="pikachu-eye-r"></div>
+      <div class="pikachu-cheek-l"></div>
+      <div class="pikachu-cheek-r"></div>
+      <div class="pikachu-mouth"></div>
+    </div>
+  </div>
+  <div class="circle-menu" id="circleMenu">
+    <button class="circle-menu-btn" id="circleMenuBtn"><i data-lucide="settings"></i></button>
+    <div class="circle-menu-items" id="circleMenuItems">
+      <button class="circle-menu-item" data-action="brightness"><i data-lucide="sun"></i></button>
+      <button class="circle-menu-item" data-action="theme"><i data-lucide="moon"></i></button>
+      <button class="circle-menu-item" data-action="translate"><i data-lucide="languages"></i></button>
+    </div>
+  </div>
+  <script th:src="@{/js/script.js}"></script>
+</body>
+</html>
