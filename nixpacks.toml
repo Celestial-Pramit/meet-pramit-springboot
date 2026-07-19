@@ -1,5 +1,5 @@
 [phases.install]
-nixPkgs = ["jdk17"]
+nixPkgs = ["jdk21"]
 
 [phases.build]
 cmd = "./mvnw clean package -DskipTests -Dmaven.test.skip=true"
