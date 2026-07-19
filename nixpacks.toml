@@ -2,7 +2,7 @@
 nixPkgs = ["jdk21"]
 
 [phases.build]
-cmd = "./mvnw clean package -DskipTests -Dmaven.test.skip=true"
+cmd = "./mvnw -B clean package -DskipTests"
 
 [start]
 cmd = "java -jar target/*.jar"

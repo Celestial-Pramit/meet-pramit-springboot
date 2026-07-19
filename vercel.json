@@ -1,6 +1,5 @@
 {
-  "buildCommand": "./mvnw clean package -DskipTests",
-  "outputDirectory": "target",
+  "framework": null,
   "env": {
     "NIXPACKS_JDK_VERSION": "21"
   }
