@@ -1,6 +1,8 @@
 {
-  "framework": null,
-  "env": {
-    "NIXPACKS_JDK_VERSION": "21"
-  }
+  "builds": [
+    {
+      "src": "Dockerfile.vercel",
+      "use": "@vercel/docker"
+    }
+  ]
 }
